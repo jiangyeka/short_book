@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "data": {
+    "topicList": [
+      {
+        "id": 1,
+        "title": "社会热点",
+        "imgUrl": "http://upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id": 2,
+        "title": "手绘",
+        "imgUrl": "http://upload.jianshu.io/collections/images/21/20120316041115481.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      }
+    ],
+    "articleList": [
+      {
+        "id": 1,
+        "title": "产品经理必备的5类原型部件，你知道几个？",
+        "desc": "这是Kevin的第 868篇原创 做产品经理多年来，我最喜欢的原型工具就是axure，主要因为原型工具用的顺手就行，在没有团队强制要求下我会选择...",
+        "imgUrl": "https://images.weserv.nl/?url=https://upload-images.jianshu.io/upload_images/6313421-b3002edba646c04c.png?imageMogr2/auto-orient/strip|imageView2/2/w/1080/format/webp"
+      },
+      {
+        "id": 2,
+        "title": "既然已经不爱了，就连朋友也不要做了",
+        "desc": "张爱玲真的很委屈，她的心里只有这一个男人，而这个男人的心里却装着很多女人，叫她怎么能不感伤？ 张爱玲曾说过，人生所谓的“生趣”其实都存在于一些不...",
+        "imgUrl": "https://images.weserv.nl/?url=https://upload-images.jianshu.io/upload_images/4185659-6c950f861973e9c6.png?imageMogr2/auto-orient/strip|imageView2/2/w/604/format/webp"
+      },
+      {
+        "id": 3,
+        "title": "三毛：文字让我心灵自由，但爱却是我的生命",
+        "desc": "1991年1月4号，女作家三毛在医院用丝袜自杀。结束了她48年短暂又带有传奇色彩的流浪一生。 此时距离她的荷西离去整整十二年，十二年前在西班牙留...",
+        "imgUrl": "https://images.weserv.nl/?url=https://upload-images.jianshu.io/upload_images/7545065-0f7a8ca9440d5241.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+      },
+      {
+        "id": 4,
+        "title": "十年，我活得像个笑话",
+        "desc": "公公去世前，说把价值两千万元的房子留给我们，为了这个承诺，我一个985的高材生，活成了全职保姆，而婆婆去世后，我才明白，原来，在别人眼里，我是小...",
+        "imgUrl": "https://images.weserv.nl/?url=https://upload-images.jianshu.io/upload_images/3874943-395ca461b654b330.JPG?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+      }
+    ],
+    "recommendList": [
+      {
+        "id": 1,
+        "imgUrl": "https://images.weserv.nl/?url=http://cdn2.jianshu.io/assets/web/banner-s-daily-e6f6601abc495573ad37f2532468186f.png"
+      },
+      {
+        "id": 2,
+        "imgUrl": "https://images.weserv.nl/?url=http://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+      },
+      {
+        "id": 3,
+        "imgUrl": "https://images.weserv.nl/?url=https://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+      },
+      {
+        "id": 4,
+        "imgUrl": "https://images.weserv.nl/?url=https://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
+      }
+    ]
+  }
+}
