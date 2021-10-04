@@ -1,15 +1,16 @@
 import axios from "axios";
 import * as constants from "./constants";
-import { List } from "immutable";
+import { fromJS } from "immutable";
 const changeHomeData = (result) => ({
   type: constants.CHAGNE_HOME_DATA,
   topicList: result.data.data.topicList,
   articleList: result.data.data.articleList,
   recommendList: result.data.data.recommendList,
 });
-const addHomeList = (list) => ({
+const addHomeList = (list, nextPage) => ({
   type: constants.ADD_ARTICLE_LIST,
-  list: List(list),
+  list: fromJS(list),
+  nextPage,
 });
 export const getHomeInfo = () => {
   return (dispatch) => {
@@ -18,10 +19,14 @@ export const getHomeInfo = () => {
     });
   };
 };
-export const getMoreList = () => {
+export const getMoreList = (page) => {
   return (dispatch) => {
-    axios.get("/api/homeList.json").then((res) => {
-      dispatch(addHomeList(res.data.data));
+    axios.get("/api/homeList.json?page=" + page).then((res) => {
+      dispatch(addHomeList(res.data.data, page + 1));
     });
   };
 };
+export const toggleTopShow = (show) => ({
+  type: constants.TOGGLE_SCROLL_TOP,
+  show,
+});

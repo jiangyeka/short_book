@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { TopicWrapper, TopicItem } from "../style";
 import { connect } from "react-redux";
-class Topic extends Component {
+class Topic extends PureComponent {
   render() {
     return (
       <TopicWrapper>
