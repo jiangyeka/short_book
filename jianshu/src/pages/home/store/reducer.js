@@ -6,6 +6,7 @@ const defaultState = fromJS({
   recommendList: [],
   articlePage: 0,
   showScroll: false,
+  witerList: [],
 });
 const stateAction = (state = defaultState, action) => {
   switch (action.type) {
@@ -14,6 +15,7 @@ const stateAction = (state = defaultState, action) => {
         topicList: fromJS(action.topicList),
         articleList: fromJS(action.articleList),
         recommendList: fromJS(action.recommendList),
+        witerList: fromJS(action.witerList)
       });
     case constants.ADD_ARTICLE_LIST:
       return state.merge({

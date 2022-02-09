@@ -111,7 +111,7 @@ class Header extends Component {
               写文章
             </Button>
           </Link>
-          <Button className="reg">注册</Button>
+          <Button className="reg" style={{cursor:'pointer'}}>注册</Button>
         </Addition>
       </HeaderWrapper>
     );

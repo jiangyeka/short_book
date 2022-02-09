@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-concat */
 import React, { PureComponent } from "react";
 import { ListItem, ListInfo, LoadMore } from "../style";
 import { connect } from "react-redux";
