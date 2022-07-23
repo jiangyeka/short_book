@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
     "element-plus": "^2.2.10",
     "vue": "^3.2.37",
     "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",
+    "sass": "^1.54.0",
     "sass-loader": "^13.0.2",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
