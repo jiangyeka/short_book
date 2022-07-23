@@ -1,7 +1,5 @@
 <template>
-index
-<el-button>index</el-button>
-<router-view></router-view>
+    <h1>HOME</h1>
 </template>
 
 <script lang="ts" setup>
