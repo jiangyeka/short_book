@@ -1,8 +1,10 @@
 <template>
-index
-<el-button>index</el-button>
-<el-icon-alarm-clock/>
-<router-view></router-view>
+    <div class="app">
+        index
+        <el-button>index</el-button>
+        <el-icon-alarm-clock />
+        <router-view></router-view>
+    </div>
 </template>
 
 <script lang="ts" setup>
@@ -10,8 +12,12 @@ index
 </script>
 
 <style lang='scss' scoped>
-svg{
+svg {
     height: 1rem;
     width: 1rem;
+}
+.app{
+    width: 100vw;
+    height: 100vh;
 }
 </style>

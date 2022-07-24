@@ -13,7 +13,6 @@ import * as Icons from '@element-plus/icons-vue'
 
 for (let i in Icons){
     app.component(`el-icon${toKebab(i)}`,Icons[i])
-    console.log('Icons[i]: ', Icons[i]);
 }
 
 app.use(router).use(element)
