@@ -1,5 +1,11 @@
 <template>
-    <el-table :data="data">
+    <el-table :data="data" v-loading="isLoading"
+    :element-loading-text="loadingOptions.loadingText"
+    :element-loading-spinner="loadingOptions.loadingSpinner"
+    :element-loading-svg="loadingOptions.loadingSvg"
+    :element-loading-svg-view-box="loadingOptions.laodingSvgBox"
+    :element-loading-background="loadingOptions.loadingBackground"
+    >
         <!-- 正常数据列渲染 -->
         <template v-for="item in generalOptions" :key="item.prop">
             <el-table-column v-if="!item.slot" :label="item.label" :align="item.align" :prop="item.prop"
@@ -23,7 +29,7 @@
 
 <script lang="ts" setup>
 import { computed, defineProps, PropType } from 'vue'
-import { TableOptions } from './types'
+import { TableOptions,LoadingOptions } from './types'
 // 表格分为两个部分，数据来源以及表格的具体配置
 // 具体配置能够根据表格传入的数据进行按行渲染
 // 因此至少就有两个prop slot 这里的配置是根据generaloption进行if渲染，然后根据内容派发给父组件，由父组件决定怎么渲染
@@ -34,12 +40,15 @@ import { TableOptions } from './types'
 interface Props {
     data: Array<any>;
     options: TableOptions[];
+    loadingOptions:LoadingOptions;
 }
 
 let props = defineProps<Props>()
 
 const generalOptions = computed(() => props.options.filter(item => !item.action))
 const operationOptions = computed(() => props.options.find(item => item.action))
+
+let  isLoading = computed(()=>!props.data||!props.data.length)
 </script>
 
 <style lang="scss" scoped>

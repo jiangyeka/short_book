@@ -17,7 +17,7 @@ svg {
     width: 1rem;
 }
 .app{
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <h1>HOME</h1>
-  <Table :data=tableData :options="options">
+  <Table :data=tableData :options="options"
+  :loadingOptions="loadingOptions"
+  >
     <template #action="{ scope }">
     {{scope.row}}
       <el-button type="primary" @click="handleConfirm(scope)">确认</el-button>
@@ -14,14 +16,16 @@
 
 <script lang="ts" setup>
 import Table from '../components/table/index.vue'
-import { TableOptions } from '../components/table/types';
-
+import { LoadingOptions, TableOptions } from '../components/table/types';
+import {ref} from 'vue'
 interface user {
   date: string;
   name: string;
   address: string;
 }
-const tableData: user[] = [
+let tableData  =ref<user[]>([])
+setTimeout(() => {
+  tableData.value=[
   {
     date: '2016-05-03',
     name: 'Tom',
@@ -43,6 +47,8 @@ const tableData: user[] = [
     address: 'No. 189, Grove St, Los Angeles',
   },
 ]
+}, 3000);
+
 let options: TableOptions[] = [
   {
     label: '日期',
@@ -67,6 +73,21 @@ let options: TableOptions[] = [
   },
 
 ]
+let loadingOptions:LoadingOptions={
+  loadingText:'Loading...',
+  loadingSvg:`
+        <path class="path" d="
+          M 30 15
+          L 28 17
+          M 25.61 25.61
+          A 15 15, 0, 0, 1, 15 30
+          A 15 15, 0, 1, 1, 27.99 7.5
+          L 15 15
+        " style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)"/>`,
+  loadingBackground:'rgba(122, 122, 122, 0.8)',
+  laodingSvgBox:'-10, -10, 50, 50'
+}
+
 function handleConfirm(scope: any) {
   console.log('confirm', scope);
 

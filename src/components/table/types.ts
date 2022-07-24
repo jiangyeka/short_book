@@ -6,3 +6,11 @@ export interface TableOptions{
     slot?:string;
     action?:boolean;
 }
+
+export interface LoadingOptions{
+    loadingText:string;
+    loadingSpinner?:string;
+    loadingSvg?:string;
+    loadingBackground?:string;
+    laodingSvgBox?:string;
+}
